@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+{% block golang %}class="active"{% endblock %}
+{% block contents %}
+		<div class="container">
+			<h1>Go Language</h1>
+
+			<h2>Script Organization</h2>
+			<p>
+				If you have any ideas on how to organize the script better please
+				let me know.
+				All the scripts start with <b>cj</b> to:
+				<ul>
+					<li>reduce the probablity of the system using my executable
+					with the same name as a system executable,</li>
+					<li>to make it easier for the <b>cjCmds</b>
+						script to find scripts that I wrote and display
+						information about them and
+					</li>
+					<li>not have a Java like full name space executable
+						requirement, which becomes burden some when runing the script.
+					</li>
+				</ul>
+			</p>
+			<h2>Script Descriptions</h2>
+			<p>
+				No attempt has been made to support the script on multiple OSes and
+				they are used on Ubuntu. It should be strainght forward
+				to convert scripts that don't use OS specific calls in them to
+				run on other OSes.
+			</p>
+			<table class="table table-striped table-bordered">
+				<tr><th>Script</th><th>Description.</th></tr>
+				<tr>
+					<td>cjCmds</td>
+					<td>Linux</td>
+					<td>
+						List script that start with <b>cj</b> and one line
+						description of the function.
+					</td>
+				</tr>
+				<tr>
+					<td>cjScreenOff</td>
+					<td>Linux</td>
+					<td>
+						Turns the screen off.
+						Can save power when walking away from a machine if
+						the screen power down time out is long.
+					</td>
+				</tr>
+			</table>
+
+			<h2>Reasons For Chosing Go</h2>
+			<table class="table table-striped table-bordered">
+				<tr><th>Language</th><th>Reason not selected.</th></tr>
+					<tr>
+						<td>Scala</td>
+						<td>
+							JVM based langauges (Clojure, etc), which are "better"
+							languages than go, were not selected
+							because:
+							<ul>
+								<li>Startup time is slow due to the JVM</li>
+								<li>Development on cloud infarstructure would cost more
+								    due to the JVM extra CPU cycle usage during development
+										when the JVM restarted very frequently. The cost
+										for RAM usages will also be higher due the JVM.
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>Rust</td>
+						<td>
+							Rust run faster and the base language syntax is better than Go
+							but Rust was not selected for the following reasons:
+							<ul>
+								<li>The concurrency model in Go is simpler to use in practice.</li>
+								<li>Rust does not have as many libraries, frameworks and
+									third party support, as Go does, as of February 2016.
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>All</td>
+						<td>
+							All languages share the following short coming relative to GO:
+							<ul>
+								<li>
+									Google is developing GO for other domains that other
+									language developers do not have the resources to
+									presue. Some of the domains that Google is
+									presuing with GO are:
+									<ul>
+										<li>Android development with Go.
+											Google already has released tools to
+											code Android application in Go (February 2016).
+										</li>
+										<li>Google Cloud application development.
+											Google has tools and documentation for writting
+											application for Google's cloud infrastructure.
+											The Go langauge team is working with the Cloud
+											team to make sure the language evolves to make
+											Cloud development easire.
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+			</table>
+
+		</div>
+{% endblock %}
