@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>About Me</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+
+	<body>
+
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<!-- start of collapsed navbar -->
+				<div class="navbar-header">
+					<button
+					  type="button"
+					  class="navbar-toggle collapsed"
+					  data-toggle="collapse"
+					  data-target="#main_navbar"
+					  aria-expanded="false">Open!</button>
+				</div>
+				<!-- end of collapsed navbar -->
+
+				<!-- start of un-collapsed navbar -->
+				<div id="main_navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li {% block index %}{% endblock %}><a href="index.html">Home</a></li>
+						<li {% block about %}{% endblock %}><a href="about.html">About</a></li>
+					</ul>
+				</div>
+				<!-- end of un-collapsed navbar -->
+			</div>
+		</nav>
+
+      {% block contents %} {% endblock %}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</body>
+</html>
