@@ -10,3 +10,7 @@ After you clone this repo do the following:
 npm install
 gulp
 ```
+
+Might eventually want to use 
+[semantic-ui](https://semantic-ui.com/) with EJS.
+Better UI with semantic and more flexiblity with node and EJS.
